@@ -9,7 +9,7 @@ import { Raster, rgb } from './raster.ts';
 import type { RGB } from './raster.ts';
 
 const regions = {
-  Europe: '1E3A5F', 'Asia-Pacific': '8B1E24', World: '374151', 'Middle East': '9A5B13',
+  Europe: '1E3A5F', 'Asia-Pacific': '8B1E24', World: '374151', 'Middle East': '743B29',
   Americas: '155E75', Science: '4338CA', Africa: '166534',
 };
 type Region = keyof typeof regions;
@@ -145,16 +145,28 @@ function card(page: Raster, story: Story, box: Box, artHeight: number): CardProo
   const fit = attempts.find(candidate => candidate.fits);
   if (!fit) throw new Error(`No full sentence fits in story ${story.id}`);
 
+  // Select the copy with the original measure and leading. Then give back
+  // spare depth as air only; the fitted words and their line breaks stay put.
+  const gaps = fit.paragraphLines.length - 1;
+  const spare = hero ? 0 : Math.max(0, fit.paragraphHeight - 9 - gaps * bodyLeading);
+  const opening = Math.min(4, Math.floor(spare / 4));
+  const spacedLeading = bodyLeading + (gaps ? Math.min(3, Math.floor(2 * (spare - opening) / gaps) / 2) : 0);
+
   page.rect(x, y, width, height, rgb(hero ? '#EEE9DD' : '#F2EEE4'));
   page.paste(illustrate(story.id, width, artHeight - (hero ? 17 : 0)), x, y);
   if (hero) page.rect(x, y + artHeight - 17, width, 17, color);
   else page.rect(x, y + artHeight, width, 1, color);
   const label = String(story.id);
-  page.rect(x + 5, y + 4, 18, 13, color);
-  center(page, label, x + 5, y + 6, 18, 9, ivory, bold);
+  if (hero) {
+    page.rect(x + width - 27, y + artHeight - 13, 1, 9, rgb('#D9CBC0'));
+    center(page, label, x + width - 24, y + artHeight - 13, 17, 9, ivory, bold);
+  } else {
+    page.rect(x + 5, y + 4, 18, 13, color);
+    center(page, label, x + 5, y + 6, 18, 9, ivory, bold);
+  }
   block(page, fit.kickerLines, x + pad, fit.kickerY, measure, 9, kickerLeading, hero ? ivory : color, bold);
   block(page, titleLines, x + pad, fit.titleY, measure, titleSize, titleLeading, ink, bold);
-  block(page, fit.paragraphLines, x + pad, fit.paragraphY, measure, 9, bodyLeading, ink);
+  block(page, fit.paragraphLines, x + pad, fit.paragraphY + opening, measure, 9, spacedLeading, ink);
   page.rect(x, y + height - 1, width, 1, hairline);
   return { id: story.id, titleLines, kickerLines: fit.kickerLines, paragraphLines: fit.paragraphLines,
     paragraphWidth: measure, paragraphHeight: fit.paragraphHeight, sentenceCount: complete.length,
