@@ -1,6 +1,7 @@
 import { deflateSync } from 'node:zlib';
 
 export type RGB = readonly [number, number, number];
+export type Point = readonly [number, number];
 
 export function rgb(hex: string): RGB {
   const color = Number.parseInt(hex.replace(/^#/, ''), 16);
@@ -53,6 +54,66 @@ export class Raster {
         this.pixels[i + 1] = g;
         this.pixels[i + 2] = b;
       }
+    }
+  }
+
+  shape(points: readonly Point[], color: RGB): void {
+    if (points.length < 3) return;
+    const top = Math.max(0, Math.ceil(Math.min(...points.map(p => p[1])) - 0.5));
+    const bottom = Math.min(this.height, Math.ceil(Math.max(...points.map(p => p[1])) - 0.5));
+    for (let row = top; row < bottom; row++) {
+      const y = row + 0.5;
+      const crossings: number[] = [];
+      for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
+        const [ax, ay] = points[j];
+        const [bx, by] = points[i];
+        if ((ay > y) !== (by > y)) crossings.push(ax + (y - ay) * (bx - ax) / (by - ay));
+      }
+      crossings.sort((a, b) => a - b);
+      for (let i = 0; i + 1 < crossings.length; i += 2) {
+        const start = Math.ceil(crossings[i] - 0.5);
+        const end = Math.ceil(crossings[i + 1] - 0.5);
+        this.rect(start, row, end - start, 1, color);
+      }
+    }
+  }
+
+  ellipse(cx: number, cy: number, rx: number, ry: number, color: RGB): void {
+    if (rx <= 0 || ry <= 0) return;
+    const top = Math.max(0, Math.ceil(cy - ry - 0.5));
+    const bottom = Math.min(this.height, Math.ceil(cy + ry - 0.5));
+    for (let y = top; y < bottom; y++) {
+      const span = rx * Math.sqrt(1 - ((y + 0.5 - cy) / ry) ** 2);
+      const left = Math.ceil(cx - span - 0.5);
+      const right = Math.ceil(cx + span - 0.5);
+      this.rect(left, y, right - left, 1, color);
+    }
+  }
+
+  stroke(points: readonly Point[], thickness: number, color: RGB): void {
+    const r = thickness / 2;
+    for (let i = 0; i < points.length; i++) {
+      const [x, y] = points[i];
+      if (i > 0) {
+        const [a, b] = points[i - 1];
+        const length = Math.hypot(x - a, y - b);
+        if (length > 0) {
+          const nx = (y - b) / length * r;
+          const ny = (a - x) / length * r;
+          this.shape([[a + nx, b + ny], [x + nx, y + ny], [x - nx, y - ny], [a - nx, b - ny]], color);
+        }
+      }
+      this.ellipse(x, y, r, r, color);
+    }
+  }
+
+  paste(tile: Raster, x: number, y: number): void {
+    if (x < 0 || y < 0 || x + tile.width > this.width || y + tile.height > this.height) {
+      throw new Error('Tile is outside page');
+    }
+    const rowBytes = 3 * tile.width;
+    for (let row = 0; row < tile.height; row++) {
+      tile.pixels.copy(this.pixels, 3 * (x + (y + row) * this.width), row * rowBytes, (row + 1) * rowBytes);
     }
   }
 

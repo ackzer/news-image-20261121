@@ -1,0 +1,130 @@
+{
+  "masthead": "THE WORLD IN ONE DAY",
+  "date": "SATURDAY 21 NOVEMBER 2026",
+  "edition": "16 STORIES · 7 REGIONS · EVERY ONE DATED SATURDAY 21 NOVEMBER 2026",
+  "stories": [
+    {
+      "id": 1, "hero": true, "region": "Europe", "pin": "Antalya",
+      "kicker": "ANTALYA, TÜRKIYE · CLIMATE",
+      "title": "Climate summit runs into Saturday with no deal",
+      "summary": "UN COP31 negotiations in Antalya stretched into overtime on Day 13 after missing Friday's scheduled close without an agreement. Nearly 200 nations remain deadlocked over a draft cover text that omitted references to fossil fuels and failed to set firm climate finance targets. EU climate chief Wopke Hoekstra warned negotiators face a stark choice between a credible deal or no deal at all.",
+      "sources": "(Reuters, AP)"
+    },
+    {
+      "id": 2, "hero": true, "region": "Middle East", "pin": "Riyadh",
+      "kicker": "RIYADH & JAZAN, SAUDI ARABIA · MISSILES",
+      "title": "Five Houthi missiles shot down over Saudi Arabia",
+      "summary": "The Saudi-led coalition intercepted three Houthi ballistic missiles over Riyadh early Saturday, bringing the two-day total to five after two missiles were destroyed over southern Jazan late Friday. Falling debris landed near Al-Shuqaiq without casualties following coalition strikes on Houthi sites at Yemen's Hodeidah port.",
+      "sources": "(AFP, Al Jazeera)"
+    },
+    {
+      "id": 3, "hero": true, "region": "Americas", "pin": "Junín",
+      "kicker": "JUNÍN, PERU · EARTHQUAKE",
+      "title": "Magnitude 6.7 earthquake shakes central Peru",
+      "summary": "A magnitude 6.7 earthquake struck near Carhuamayo in Peru's central Junín region at 00:09 UTC Saturday at a depth of 108 kilometers. Civil defense agency INDECI reported at least eight people injured and dozens of homes damaged across Junín, Pasco, and Callao, with no deaths or tsunami threat.",
+      "sources": "(USGS, INDECI)"
+    },
+    {
+      "id": 4, "region": "Europe", "pin": "Kyiv",
+      "kicker": "KYIV, UKRAINE · WAR",
+      "title": "Zelensky calls Putin an enemy and a killer",
+      "summary": "Ukrainian President Volodymyr Zelensky rejected U.S. President Donald Trump's friendly characterization of Vladimir Putin during a broadcast interview Saturday. Zelensky insisted that Russia's leader remains an enemy and a killer to Ukraine while affirming that European allies stand united in backing Kyiv's defense.",
+      "sources": "(CNN, Reuters)"
+    },
+    {
+      "id": 5, "region": "Middle East", "pin": "Khasab",
+      "kicker": "STRAIT OF HORMUZ · TANKER",
+      "title": "Tanker struck by projectile near Oman's Khasab",
+      "summary": "An outbound oil tanker was hit on its stern by an unidentified projectile 11 nautical miles north of Khasab, Oman, on Saturday, according to the UK Maritime Trade Operations. Separately, Iran's Revolutionary Guard claimed its air defenses shot down a U.S. MQ-9 Reaper drone near Qeshm Island.",
+      "sources": "(Reuters, UKMTO)"
+    },
+    {
+      "id": 6, "region": "Middle East", "pin": "Basra",
+      "kicker": "BASRA, IRAQ · POWER PLANT BLAST",
+      "title": "Gas pipeline blast kills four at Basra power plant",
+      "summary": "A gas pipeline explosion at the Hartha power station north of Basra killed four people and injured 35 others on Saturday. Civil defense crews battled the blaze for hours after flames damaged dozens of nearby homes and vehicles as authorities launched an investigation.",
+      "sources": "(The National, INA)"
+    },
+    {
+      "id": 7, "region": "Asia-Pacific", "pin": "Davao",
+      "kicker": "DAVAO, PHILIPPINES · EMERGENCY LANDING",
+      "title": "Jet lands safely in Davao after engine fire alert",
+      "summary": "Air Niugini Flight PX19, a Boeing 767 flying from Hong Kong to Port Moresby, made an emergency landing at Davao International Airport at 12:08 a.m. Saturday. All 137 passengers and nine crew members evacuated safely via emergency slides after a right-engine fire alert damaged four landing gear wheels.",
+      "sources": "(AP, CAAP)"
+    },
+    {
+      "id": 8, "region": "Asia-Pacific", "pin": "Shenzhen",
+      "kicker": "SHENZHEN, CHINA · TRADE TALKS",
+      "title": "China and Australia pledge AI and green trade ties",
+      "summary": "Chinese Premier Li Qiang and Australian Prime Minister Anthony Albanese agreed on Saturday to expand bilateral cooperation in artificial intelligence, clean energy, and electric vehicles. Speaking after the Shenzhen APEC meetings, both leaders pledged to keep economic dialogue constructive despite regional strategic differences.",
+      "sources": "(Xinhua, ABC)"
+    },
+    {
+      "id": 9, "region": "Asia-Pacific", "pin": "Tokyo",
+      "kicker": "TOKYO, JAPAN · TAIWAN POLICY",
+      "title": "Japan reaffirms Taiwan policy after China snub",
+      "summary": "Japanese Prime Minister Sanae Takaichi reiterated on Saturday that Tokyo's stance on Taiwan under the 1972 communiqué remains completely unchanged. Her remarks followed a chilly reception from Chinese officials at the APEC summit in Shenzhen and a 20-minute security call with U.S. President Donald Trump.",
+      "sources": "(AFP, Jiji)"
+    },
+    {
+      "id": 10, "region": "World", "pin": "Atlantik tengah (pasar global)",
+      "kicker": "GLOBAL · CRYPTO MARKETS",
+      "title": "Bitcoin slides near $55,200 amid $2.5B liquidations",
+      "summary": "Bitcoin tumbled to roughly $55,200 early Saturday, marking its lowest level in four months as a broader tech and crypto selloff deepened. Over $2.53 billion in leveraged futures positions were liquidated within 24 hours across nearly 360,000 traders, pushing the Crypto Fear and Greed Index down to 5.",
+      "sources": "(Bloomberg, CoinGecko)"
+    },
+    {
+      "id": 11, "region": "Americas", "pin": "Las Vegas",
+      "kicker": "LAS VEGAS, UNITED STATES · FORMULA 1",
+      "title": "Verstappen warned after Las Vegas practice clash",
+      "summary": "Formula 1 stewards issued Max Verstappen a formal warning early Saturday after he and Mercedes rival George Russell banged wheels at Turn 14 during final Las Vegas Grand Prix practice. The incident triggered a renewed war of words between the drivers ahead of qualifying on the Nevada street circuit.",
+      "sources": "(Autosport, Formula 1)"
+    },
+    {
+      "id": 12, "region": "Asia-Pacific", "pin": "Wellington",
+      "kicker": "WELLINGTON, NEW ZEALAND · CRICKET",
+      "title": "KL Rahul hits 136 to put India in command in Test",
+      "summary": "Opener KL Rahul scored 136 runs and captain Shubman Gill added 98 as India reached 486 for 4 at stumps on Day 3 of the first Test against New Zealand in Wellington. India established a commanding 118-run first-innings lead at the Basin Reserve after replying to New Zealand's 368.",
+      "sources": "(AFP, ESPNcricinfo)"
+    },
+    {
+      "id": 13, "region": "Europe", "pin": "Eropa tengah (Berlin)",
+      "kicker": "EUROPE · PROTESTS",
+      "title": "Youth and labor protests sweep 25 European nations",
+      "summary": "Students and trade union workers staged coordinated demonstrations across 25 European countries on Saturday, including 73 German towns and major squares in London and Milan. Protesters demanded stronger climate commitments, increased education funding, and curbs on rising military spending.",
+      "sources": "(Reuters)"
+    },
+    {
+      "id": 14, "region": "Africa", "pin": "Abuja",
+      "kicker": "ABUJA, NIGERIA · FOOTBALL SUMMIT",
+      "title": "African football leaders convene 54 nations in Abuja",
+      "summary": "CAF President Patrice Motsepe opened the 48th Confederation of African Football General Assembly in Abuja on Saturday with delegates from 54 member federations. The summit reviews increased federation development grants and sets the continental governance agenda ahead of upcoming FIFA elections.",
+      "sources": "(CAF, Daily News Egypt)"
+    },
+    {
+      "id": 15, "region": "Africa", "pin": "Rabat",
+      "kicker": "RABAT, MOROCCO · DEFENSE",
+      "title": "Morocco commits €366M to build defense industry",
+      "summary": "Moroccan authorities announced a €366 million investment plan on Saturday to develop a domestic defense manufacturing industry by 2035. The initiative seeks to reduce reliance on foreign weapons imports while positioning Morocco as a regional aerospace and defense production hub.",
+      "sources": "(Africanews, MAP)"
+    },
+    {
+      "id": 16, "region": "Science", "pin": "posisi orbit di atas peta",
+      "kicker": "MERCURY ORBIT · SCIENCE",
+      "title": "BepiColombo enters Mercury orbit after 8-year trip",
+      "summary": "The joint European-Japanese spacecraft BepiColombo executes its critical orbital insertion burn around Mercury on Saturday following an eight-year, nine-flyby journey across the inner solar system. Carrying two stacked science orbiters, it becomes only the third mission in history to visit the planet closest to the Sun.",
+      "sources": "(ESA, JAXA)"
+    }
+  ],
+  "kpi": [
+    {"value": "Day 13", "label": "COP31 climate talks run into overtime in Antalya"},
+    {"value": "5", "label": "Houthi ballistic missiles intercepted over two days"},
+    {"value": "6.7", "label": "Magnitude of earthquake shaking central Peru"},
+    {"value": "146", "label": "People safe after Air Niugini emergency landing in Davao"},
+    {"value": "$55,200", "label": "Bitcoin low Saturday amid $2.53B in liquidations"},
+    {"value": "136", "label": "KL Rahul's century score putting India ahead in Wellington"}
+  ],
+  "dateCheck": "Left out as Friday 20 November's news: Wall Street's sharp tech selloff (Nasdaq -5.3%), Russia's barrage hitting three Kyiv bridges, the passing of former South African Deputy President Phumzile Mlambo-Ngcuka, and the $7.25bn Bayer Roundup settlement. Older still: the ADGM Binance asset-freeze order (18 Nov).",
+  "footer": "Every story here happened, or was first reported, on Saturday 21 November 2026.",
+  "footerCredit": "Sources named beside each story · Original procedural drawings"
+}
